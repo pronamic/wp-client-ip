@@ -23,9 +23,11 @@ class ClientIpTest extends \WP_UnitTestCase {
 	 * Test `REMOTE_ADDR`.
 	 */
 	public function test_client_remote_addr() {
-		$_SERVER['REMOTE_ADDR'] = '127.0.0.1';
+		$factory = new Factory( array(
+			'REMOTE_ADDR' => '127.0.0.1',
+		) );
 
-		$client_ip = ClientIp::get();
+		$client_ip = $factory->get_client_ip();
 
 		$this->assertEquals( '127.0.0.1', $client_ip->get_value() );
 	}
@@ -34,10 +36,12 @@ class ClientIpTest extends \WP_UnitTestCase {
 	 * Test `HTTP_X_REAL_IP`.
 	 */
 	public function test_client_http_x_real_ip() {
-		$_SERVER['REMOTE_ADDR']    = '127.0.0.1';
-		$_SERVER['HTTP_X_REAL_IP'] = '208.67.220.220';
+		$factory = new Factory( array(
+			'REMOTE_ADDR'    => '127.0.0.1',
+			'HTTP_X_REAL_IP' => '208.67.220.220',
+		) );
 
-		$client_ip = ClientIp::get();
+		$client_ip = $factory->get_client_ip();
 
 		$this->assertEquals( '208.67.220.220', $client_ip->get_value() );
 	}

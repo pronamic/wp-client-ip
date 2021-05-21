@@ -24,6 +24,7 @@ ips: [
 ],
 ip: {
 	"value": "127.0.0.1",
+	"forwarded": false,
 	"confidence": 100
 }
 ```
@@ -50,3 +51,4 @@ ip: {
 - https://www.php.net/manual/en/reserved.variables.server.php#122495
 - https://support.cloudflare.com/hc/en-us/articles/200170786-Restoring-original-visitor-IPs
 - https://docs.php.earth/faq/misc/ip/
+- https://github.com/pbojinov/request-ip

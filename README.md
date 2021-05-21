@@ -12,12 +12,12 @@ ips: [
 		"header": "X-Real-IP"
 	},
 	{
-		"ip": "127.0.0.1",
+		"value": "127.0.0.1",
 		"source": "header",
 		"header": "Client-IP"
 	},
 	{
-		"ip": "127.0.0.1",
+		"value": "127.0.0.1",
 		"source": "php",
 		"server": "REMOTE_ADDR"
 	}

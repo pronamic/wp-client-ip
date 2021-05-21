@@ -18,3 +18,6 @@ WordPress library to retrieve the client IP address.
 - https://stackoverflow.com/questions/33268683/how-to-get-client-ip-address-in-laravel-5
 - https://laravel.com/docs/8.x/requests#request-ip-address
 - https://github.com/symfony/http-foundation/blob/5.4/Request.php#L806-L829
+- https://stackoverflow.com/questions/1634782/what-is-the-most-accurate-way-to-retrieve-a-users-correct-ip-address-in-php
+- https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Forwarded-For
+- http://nginx.org/en/docs/http/ngx_http_realip_module.html

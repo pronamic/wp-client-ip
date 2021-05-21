@@ -69,6 +69,13 @@ class ClientIp {
 			'HTTP_X_CLUSTER_CLIENT_IP',
 			'HTTP_FORWARDED_FOR',
 			'HTTP_FORWARDED',
+			/**
+			 * `REMOTE_ADDR` still represents the most reliable source of an
+			 * IP address. The other `$_SERVER` variables mentioned here can
+			 * be spoofed by a remote client very easily.
+			 *
+			 * @link https://stackoverflow.com/questions/1634782/what-is-the-most-accurate-way-to-retrieve-a-users-correct-ip-address-in-php
+			 */
 			'REMOTE_ADDR',
 		);
 

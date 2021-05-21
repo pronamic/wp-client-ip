@@ -2,6 +2,32 @@
 
 WordPress library to retrieve the client IP address.
 
+## To-Do
+
+```json
+ips: [
+	{
+		"value": "127.0.0.1",
+		"source": "header",
+		"header": "X-Real-IP"
+	},
+	{
+		"ip": "127.0.0.1",
+		"source": "header",
+		"header": "Client-IP"
+	},
+	{
+		"ip": "127.0.0.1",
+		"source": "php",
+		"server": "REMOTE_ADDR"
+	}
+],
+ip: {
+	"value": "127.0.0.1",
+	"confidence": 100
+}
+```
+
 ## WordPress
 
 - https://github.com/wp-pay/core/blob/2.7.0/src/Core/Util.php#L341-L386
@@ -21,3 +47,6 @@ WordPress library to retrieve the client IP address.
 - https://stackoverflow.com/questions/1634782/what-is-the-most-accurate-way-to-retrieve-a-users-correct-ip-address-in-php
 - https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Forwarded-For
 - http://nginx.org/en/docs/http/ngx_http_realip_module.html
+- https://www.php.net/manual/en/reserved.variables.server.php#122495
+- https://support.cloudflare.com/hc/en-us/articles/200170786-Restoring-original-visitor-IPs
+- https://docs.php.earth/faq/misc/ip/
